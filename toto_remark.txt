@@ -1,0 +1,44 @@
+### Toto Install openthaigpt
+To install OpenThaiGPT, run this command in your terminal:
+$ git clone git://github.com/kobkrit/openthaigpt
+$ curl -OJL https://github.com/kobkrit/openthaigpt/tarball/master
+$ python setup.py install
+>> Test Script
+
+### Install Flask
+https://flask.palletsprojects.com/en/2.3.x/installation/#virtual-environments
+https://flask.palletsprojects.com/en/2.3.x/quickstart/
+# Linux 
+$ mkdir myproject
+$ cd myproject
+$ python3 -m venv .venv
+-# Activate environment
+$ . .venv/bin/activate
+
+# Windows
+> mkdir myproject
+> cd myproject
+> py -3 -m venv .venv
+-# Activate environment
+> .venv\Scripts\activate
+
+(* activate.bat activate batch file)
+
+>>>> pip install Flask
+
+
+(* Add first app / Test Script )
+-----------------------
+# app.py
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello_world():
+    return "<p>Hello, World!</p>"
+-----------------------
+$ flask --app hello run
+ * Serving Flask app 'hello'
+ * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+-----------------------
+
+
