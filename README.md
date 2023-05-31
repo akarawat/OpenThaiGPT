@@ -102,3 +102,9 @@ print(openthaigpt.zero("การลดน้ำหนักเป็นเร�
 * Microsoft
 * Mahidol University
 * Gitbook
+
+### Toto
+To install OpenThaiGPT, run this command in your terminal:
+$ git clone git://github.com/kobkrit/openthaigpt
+$ curl -OJL https://github.com/kobkrit/openthaigpt/tarball/master
+$ python setup.py install

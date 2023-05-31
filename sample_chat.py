@@ -1,15 +1,22 @@
 import openthaigpt
 
 # OpenThaiGPT Model 0.1.0-beta
+'''
 print(openthaigpt.generate(instruction="แปลภาษาอังกฤษเป็นภาษาไทย", 
         input="We want to reduce weight.", 
         model_name = "kobkrit/openthaigpt-0.1.0-beta", 
         min_length=50, max_length=300, top_p=0.75, 
         top_k=40, num_beams=1, no_repeat_ngram_size=0, 
         temperature=0.1, early_stopping=True, load_8bit=False))
+'''
 # เราต้องการลดน้ำหนัก.
-
 # OpenThaiGPT Model 0.1.0-alpha
+print(openthaigpt.generate(instruction="ระบุ 5 อาการทั่วไปของ COVID-19", 
+        input="", model_name = "kobkrit/openthaigpt-0.1.0-alpha", 
+        min_length=50, max_length=1000, top_k=20,
+        num_beams=5, no_repeat_ngram_size=10, temperature=1.5,
+        early_stopping=True))
+'''
 print(openthaigpt.generate(instruction="อธิบายขั้นตอนการทำข้าวผัดไก่", 
         input="", model_name = "kobkrit/openthaigpt-0.1.0-alpha", 
         min_length=50, max_length=768, top_k=20,
@@ -50,4 +57,4 @@ openthaigpt.zero("สวัสดีครับ", threshold=5)
 # {'perplexity': 8.109768867492676,
 # 'theshold': 5,
 # 'isGeneratedFromOpenThaiGPT': False}
-
+'''
