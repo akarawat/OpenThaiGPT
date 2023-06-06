@@ -51,4 +51,5 @@ $ flask --app hello run
 > By Falsk 
 - Install flask > register .env > (* activate.bat activate batch file) > create app.py (hello world) > 
 - add openthaigpt script in app.py
+- CD to Directory > D:\PYTHON\openthaigpt\OpenThaiGPT-1\.venv\Scripts
 
