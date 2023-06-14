@@ -41,7 +41,7 @@ $ flask --app hello run
  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
 -----------------------
 
-#### How to Run
+#### How to Run WINDOWS VS Code
 > By Python Cli
 - python > import openthaigpt > run_command
 
@@ -52,4 +52,45 @@ $ flask --app hello run
 - Install flask > register .env > (* activate.bat activate batch file) > create app.py (hello world) > 
 - add openthaigpt script in app.py
 - CD to Directory > D:\PYTHON\openthaigpt\OpenThaiGPT-1\.venv\Scripts
+
+
+
+#### How to Run "Ubuntu 18.04.2 LTS" >> Server 172.20.15.185
+https://linuxize.com/post/how-to-install-flask-on-ubuntu-18-04/
+# Install flask
+root@gwapp01:/home/gwapp/tidopenai# python3 -m flask --version
+Python 3.6.9
+Flask 2.0.3
+Werkzeug 2.0.3
+--------> จะต้องขึ้น (venv) เพื่อสร้าง virtual path และเขียนโค้ดใน app
+(venv) root@gwapp01:/home/gwapp/tidopenai/tidfapp#
+-----
+# RUN1 #
+$flask run 
+http://127.0.0.1:5000/
+
+# RUN2 #
+1: $flask run --host=0.0.0.0 
+Or 2: $flask run --host=0.0.0.0 --port=5000
+http://172.20.15.185:5000/
+
+# Allow Firewall #
+https://www.cyberciti.biz/faq/how-to-setup-a-ufw-firewall-on-ubuntu-18-04-lts-server/
+$sudo ufw status
+$sudo ufw allow proto tcp from any to 10.8.0.1 port 22
+$sudo ufw show added
+$sudo ufw enable
+$sudo ufw disable
+#-->delete
+$sudo ufw status numbered
+$sudo ufw delete allow (numbered)
+$sudo ufw delete 2
+$sudo ufw status numbered
+$sudo ufw delete 3
+
+
+### Start Flask on Systemd Linux
+https://blog.miguelgrinberg.com/post/running-a-flask-application-as-a-service-with-systemd
+
+
 
